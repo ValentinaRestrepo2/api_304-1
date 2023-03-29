@@ -5,7 +5,18 @@ const server = express();
 server.use(json())
 server.use(cors())
 
-const users: { [key: string  | number ]: any } = {}
+const users: { [key: string  | number ]: any } = {
+  "747": {
+      "id": 747,
+      "name": "Camilo Andres",
+      "lastName": "López"
+  },
+  "7180": {
+      "id": 7180,
+      "name": "Angel",
+      "lastName": "Góez Giraldo"
+  }
+}
 
 server.get('/api', (req: Request, res: Response) => {
   res.send(users)
@@ -16,5 +27,5 @@ server.get('/api/:id', (req: Request, res: Response) => {
 })
 
 server.listen(80, () => {
-  console.log('App is up and running')
+  console.log('App is up and running', 80)
 })
