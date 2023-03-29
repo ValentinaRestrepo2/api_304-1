@@ -1,7 +1,9 @@
 import express, { Request, Response, json } from 'express'
+import cors from 'cors'
 const server = express();
 
 server.use(json())
+server.use(cors())
 
 const users: { [key: string  | number ]: any } = {}
 
