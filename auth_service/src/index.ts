@@ -8,8 +8,8 @@ server.use(cors())
 const users: { [key: string  | number ]: any } = {
   "747": {
       "id": 747,
-      "name": "Camilo Andres",
-      "lastName": "López"
+      "name": "Valentina",
+      "lastName": "Restrepo"
   },
   "7180": {
       "id": 7180,
@@ -26,6 +26,6 @@ server.get('/api/:id', (req: Request, res: Response) => {
   res.send(users[req.params.id])
 })
 
-server.listen(80, () => {
+server.listen(8080, () => {
   console.log('App is up and running', 80)
 })
